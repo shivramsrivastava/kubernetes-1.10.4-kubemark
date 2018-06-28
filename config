@@ -12,7 +12,7 @@
 --flow_scheduling_solver=cs2
 #--debug_cost_model=true
 #--debug_flow_graph=true
-#--logtostderr=true
+--logtostderr=true
 --flow_scheduling_binary=./cs2.exe
 #--flowlessly_algorithm=successive_shortest_path
 --run_incremental_scheduler=false
