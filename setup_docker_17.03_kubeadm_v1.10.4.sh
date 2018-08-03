@@ -34,9 +34,9 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get remove kubelet kubeadm kubectl
 apt-get update
-apt-get install -y kubelet=1.10.4-00 kubeadm=1.10.4-00 kubectl=1.10.4-00
+apt-get install -y kubelet=1.11.1-00 kubeadm=1.11.1-00 kubectl=1.11.1-00
 echo "Installed kubeadm kubelet kubectl 1.10.4."
 # Be careful with below command, edit manully if you ran this script earlier.
-sed -i 's/--kubeconfig=\/etc\/kubernetes\/kubelet.conf/--kubeconfig=\/etc\/kubernetes\/kubelet.conf --max-pods=210 --cgroup-driver=cgroupfs/' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+# sed -i 's/--kubeconfig=\/etc\/kubernetes\/kubelet.conf/--kubeconfig=\/etc\/kubernetes\/kubelet.conf --max-pods=210 --cgroup-driver=cgroupfs/' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 systemctl daemon-reload
 systemctl restart kubelet
