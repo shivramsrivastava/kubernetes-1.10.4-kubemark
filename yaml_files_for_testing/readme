@@ -1,0 +1,5 @@
+# Sample command to generate yaml files.
+./run_normal_pods_rs.py 69 10 20 80 40 160 1 & 
+# Above command generates 69 RS with 10 replicas each. 
+# cpu req: 20m, mem req: 80Mi and cpu lim: 40, mem limit: 160
+# name of replica set : nginx-normal-pod-1
